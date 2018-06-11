@@ -1,0 +1,107 @@
+{
+   "attribute" : [
+      {
+         "arg1" : "",
+         "arg2" : "",
+         "arg4" : "",
+         "label1" : "Subscription ID",
+         "label2" : "Client ID",
+         "label3" : "Secret Key",
+         "label4" : "Tenant ID",
+         "name" : "AZURE_CREDENTIALS",
+         "secured1" : "0",
+         "secured2" : "0",
+         "secured3" : "1",
+         "secured4" : "0",
+         "value" : "Resource Group"
+      },
+      {
+         "arg1" : "",
+         "arg2" : "",
+         "arg3" : "",
+         "arg4" : "",
+         "label1" : "Provider",
+         "label2" : "Aggregation",
+         "label3" : "UOM",
+         "label4" : "",
+         "name" : "AZURE_SEARCH_VALUES",
+         "secured1" : "0",
+         "secured2" : "0",
+         "secured3" : "0",
+         "secured4" : "0",
+         "value" : "Search Metric"
+      }
+   ],
+   "hosttemplate" : [
+      {
+         "description" : "Monitor any Azure supported metric",
+         "has_icon" : "0",
+         "managementurls" : [],
+         "name" : "Cloud - Azure - Generic",
+         "servicechecks" : [
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "Azure - Generic",
+               "timed_exception" : null
+            }
+         ]
+      }
+   ],
+   "keyword" : [],
+   "servicecheck" : [
+      {
+         "alert_from_failure" : "1",
+         "args" : "-H $HOSTADDRESS$ -m generic -r '%AZURE_CREDENTIALS%' -s '%AZURE_CREDENTIALS:1%' -C '%AZURE_CREDENTIALS:2%' -S '%AZURE_CREDENTIALS:3%' -t '%AZURE_CREDENTIALS:4%' -M '%AZURE_SEARCH_VALUES%' -p '%AZURE_SEARCH_VALUES:1%' -a '%AZURE_SEARCH_VALUES:2%' -u '%AZURE_SEARCH_VALUES:3%'",
+         "attribute" : {
+            "name" : "AZURE_SEARCH_VALUES"
+         },
+         "calculate_rate" : "no",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "0",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Monitor any Azure supported metric",
+         "event_handler" : "",
+         "event_handler_always_exec" : "0",
+         "flap_detection_enabled" : "1",
+         "freshness_type" : "renotify",
+         "invertresults" : "0",
+         "keywords" : [],
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "Azure - Generic",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_azure.py"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Azure - Generic"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : "",
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      }
+   ],
+   "servicegroup" : [
+      {
+         "name" : "Cloud - Azure - Generic"
+      }
+   ]
+}
