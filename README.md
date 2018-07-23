@@ -100,7 +100,7 @@ If you are running more than one subscription these steps will need to be done f
 
 ## Setup and Configuration
 
-To configure and utilize this Opspack, you simply need to add the 'Cloud - Azure - Virtual Machines' Opspack to your Opsview Monitor system
+To configure and utilize this Opspack, you simply need to add the 'Cloud - Azure - Generic' Opspack to your Opsview Monitor system
 
 #### Step 1: Add the host template
 
