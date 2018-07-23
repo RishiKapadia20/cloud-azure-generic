@@ -10,10 +10,9 @@ Opsview Monitor's Azure Generic Opspack provides all the metrics to track your c
 
 ## Service Checks
 
-| Service Check |
-|:------------- |
-|Azure-Redis-Generic: Metric Name 1
-|Azure-Redis-Generic: Metric Name 2
+| Service Check | Description |
+|:------------- |:----------- |
+|Azure-Generic | Generic Metric |
 
 ## Prerequisites
 
@@ -101,7 +100,7 @@ If you are running more than one subscription these steps will need to be done f
 
 ## Setup and Configuration
 
-To configure and utilize this Opspack, you simply need to add the 'Cloud - Azure - Virtual Machines' Opspack to your Opsview Monitor system
+To configure and utilize this Opspack, you simply need to add the 'Cloud - Azure - Generic' Opspack to your Opsview Monitor system
 
 #### Step 1: Add the host template
 
@@ -109,9 +108,9 @@ To configure and utilize this Opspack, you simply need to add the 'Cloud - Azure
 
 #### Step 2: Add and configure variables required for this host
 
-Add 'AZURE_CREDENTIALS' to the host and set the **Resource Group** as its variable value
+Add 'AZURE_CREDENTIALS' to the host and set the **Resource Group** as its variable value, then override the Subscription ID, Client ID, Secret Key and Tenant ID.
 
-Then override the Subscription ID, Client ID, Secret Key and Tenant ID
+Add 'AZURE_SEARCH_VALUES' to the host and set the **Metric** as its variable value, then override the Provider, Aggregation and UOM fields with the correct values.
 
 ![Add Variables](/docs/img/variable.png?raw=true)
 
